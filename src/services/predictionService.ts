@@ -1,4 +1,3 @@
-// src/services/predictionService.ts
 import StockPredictionModel from '../models/stockPredictionModel';
 
 class PredictionService {

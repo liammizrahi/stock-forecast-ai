@@ -1,11 +1,22 @@
-// src/services/stockDataService.ts
 import AlphaAdvantageDataProvider from '../data/alphaAdvantageDataProvider';
+import {DataProvider} from "../data/dataProvider";
+import DataProviderInterface from "../data/dataProvider.interface";
+import PolygonIoDataProvider from "../data/polygonIoDataProvider";
 
 class StockDataService {
-    private dataProvider: AlphaAdvantageDataProvider;
+    private dataProvider: DataProviderInterface;
 
-    constructor(apiKey: string) {
-        this.dataProvider = new AlphaAdvantageDataProvider(apiKey);
+    constructor(dataProvider: DataProvider) {
+        switch(dataProvider) {
+            case DataProvider.ALPHA_VANTAGE:
+                this.dataProvider = new AlphaAdvantageDataProvider();
+                break;
+            case DataProvider.POLYGON_IO:
+                this.dataProvider = new PolygonIoDataProvider();
+                break;
+            default:
+                throw new Error(`Invalid data provider: ${dataProvider}`);
+        }
     }
 
     async getStockData(symbol: string): Promise<number[]> {

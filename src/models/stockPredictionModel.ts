@@ -1,4 +1,3 @@
-// src/models/stockPredictionModel.ts
 import * as tf from '@tensorflow/tfjs-node';
 
 interface NormalizationParameters {

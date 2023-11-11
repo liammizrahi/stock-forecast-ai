@@ -1,12 +1,12 @@
-// src/data/alphaAdvantageDataProvider.ts
 import axios from 'axios';
+import DataProviderInterface from "./dataProvider.interface";
 
-class AlphaAdvantageDataProvider {
+class AlphaAdvantageDataProvider implements DataProviderInterface {
     private apiKey: string;
     private baseUrl: string;
 
-    constructor(apiKey: string) {
-        this.apiKey = apiKey;
+    constructor() {
+        this.apiKey = String(process.env.ALPHA_VANTAGE_API_KEY || '');
         this.baseUrl = 'https://www.alphavantage.co/query';
     }
 

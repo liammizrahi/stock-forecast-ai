@@ -1,5 +1,3 @@
-// src/utils/fileUtils.ts
-
 import * as fs from 'fs';
 
 class FileUtils {
