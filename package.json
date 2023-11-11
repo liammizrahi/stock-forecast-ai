@@ -1,0 +1,24 @@
+{
+  "name": "stock-forecast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.13.0",
+    "@tensorflow/tfjs-node": "^4.13.0",
+    "@types/axios": "^0.14.0",
+    "@types/node": "^20.9.0",
+    "alphavantage": "^2.5.0",
+    "dotenv": "^16.3.1",
+    "ml-regression": "^5.0.0",
+    "tsc": "^2.0.4",
+    "typescript": "^5.2.2"
+  }
+}
