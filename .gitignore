@@ -3,3 +3,13 @@
 
 # node_modules
 node_modules/
+
+.trained/
+
+# IDE
+.idea/
+.vscode/
+.fleet/
+
+# misc
+.DS_Store

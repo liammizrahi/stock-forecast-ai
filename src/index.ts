@@ -43,7 +43,7 @@ async function predict(symbol: string): Promise<PredictionResult> {
         //console.log(`[${stockFullName}] Predicted next day's closing price: ${nextDayPrediction}`);
 
         // Save the model to a file (for demonstration purposes)
-        FileUtils.saveToFile(predictionService, `${symbol}-prediction-model.json`);
+        FileUtils.saveToFile(predictionService, `.trained/${symbol}-prediction-model.json`);
 
         return (new PredictionResult(symbol, stockFullName, nextDayPrediction));
     } catch (error: any) {
