@@ -1,19 +1,19 @@
-import StockPredictionModel from '../models/stockPredictionModel';
+import StockPredictionModel from '../models/stockPredictionModel'
 
 class PredictionService {
-    private model: StockPredictionModel;
+  private model: StockPredictionModel
 
-    constructor() {
-        this.model = new StockPredictionModel();
-    }
+  constructor() {
+    this.model = new StockPredictionModel()
+  }
 
-    async trainModel(data: number[]): Promise<void> {
-        await this.model.train(data);
-    }
+  async trainModel(data: number[]): Promise<void> {
+    await this.model.train(data)
+  }
 
-    makePrediction(data: number): number {
-        return this.model.predict(data);
-    }
+  makePrediction(data: number): number {
+    return this.model.predict(data)
+  }
 }
 
-export default PredictionService;
+export default PredictionService

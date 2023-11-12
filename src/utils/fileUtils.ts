@@ -1,9 +1,9 @@
-import * as fs from 'fs';
+import * as fs from 'fs'
 
 class FileUtils {
-    static saveToFile(data: any, filePath: string): void {
-        fs.writeFileSync(filePath, JSON.stringify(data));
-    }
+  static saveToFile(data: any, filePath: string): void {
+    fs.writeFileSync(filePath, JSON.stringify(data))
+  }
 }
 
-export default FileUtils;
+export default FileUtils
